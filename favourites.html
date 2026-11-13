@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorites | Denver Eclipse</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Favorite images */
+    .fav-image-area {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .fav-image {
+      display: none;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+      
+    }
+
+    .fav-image:target {
+      display: block;
+    }
+
+    /* Favorite descriptions */
+    .fav-description {
+      display: none;
+      margin-top: 30px;
+    }
+
+    body:has(#food:target) #food-text,
+    body:has(#sports:target) #sports-text,
+    body:has(#music:target) #music-text,
+    body:has(#movies:target) #movies-text {
+      display: block;
+    }
+
+    .fav-description h2 {
+      color: #e8731a;
+      font-size: 18px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .fav-description p {
+      color: #a0a0a5;
+      font-size: 15px;
+    }
+
+    /* Favorite buttons */
+    .circle-menu {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .circle-btn {
+      width: 120px;
+      height: 120px;
+      font-size: 15px;
+    }
+
+    .fav-title {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="main-layout">
+
+    <!-- Selected favorite image -->
+    <div class="fav-image-area">
+
+      <img src="images /food.jpg" id="food" class="fav-image" alt="Favorite food">
+
+      <img src="images /hurdles.jpg" id="sports" class="fav-image" alt="Track and field">
+
+      <img src="images /music.jpg" id="music" class="fav-image" alt="Favorite music">
+
+      <img src="images /mov.jpg" id="movies" class="fav-image" alt="Favorite movies">
+
+    </div>
+
+    <!-- Main content -->
+    <div class="right-panel">
+
+      <!-- Navigation -->
+      <header>
+        <nav class="pill-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="favourites.html" class="active">Favorites</a>
+        </nav>
+      </header>
+
+      <div class="scroll-content">
+
+        <h1 class="fav-title">Favorites</h1>
+
+        <!-- Favorite buttons -->
+        <div class="circle-menu">
+
+          <a href="#food" class="circle-btn">Food</a>
+
+          <a href="#sports" class="circle-btn">Sports</a>
+
+          <a href="#music" class="circle-btn">Music</a>
+
+          <a href="#movies" class="circle-btn">Movies</a>
+
+        </div>
+
+        <!-- Food description -->
+        <div class="fav-description" id="food-text">
+          <h2>Favorite Food</h2>
+          <p>
+            I love eating my favorite foods, humba and lechon,
+            together with my family.
+          </p>
+        </div>
+
+        <!-- Sports description -->
+        <div class="fav-description" id="sports-text">
+          <h2>Favorite Sports</h2>
+          <p>
+            I enjoy running and competing in track events,
+            especially the 200m sprint and 110m hurdles.
+          </p>
+        </div>
+
+        <!-- Music description -->
+        <div class="fav-description" id="music-text">
+          <h2>Favorite Music</h2>
+          <p>
+            I enjoy listening to music during my free time.
+            It helps me relax and enjoy my day.
+          </p>
+        </div>
+
+        <!-- Movies description -->
+        <div class="fav-description" id="movies-text">
+          <h2>Favorite Movies</h2>
+          <p>
+            I enjoy watching Filipino movies and dramas
+            during my free time.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
